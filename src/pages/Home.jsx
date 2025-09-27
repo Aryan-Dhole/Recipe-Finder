@@ -13,9 +13,9 @@ function Home() {
         setRecipes(data.results)
     }
 
-    // useEffect(() => {
-    //     searchRecipes("paneer");
-    // }, []);
+    useEffect(() => {
+        searchRecipes("paneer");
+    }, []);
 
 
     return (

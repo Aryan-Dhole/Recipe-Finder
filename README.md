@@ -56,7 +56,7 @@ Copy code
 npm run dev
 
 ## live Preview
-[Check on Netlify]()
+[Check on Netlify](https://recipe-explorer-react.netlify.app/)
 
 ## 📸 Screenshots
 ![alt text](image.png)
