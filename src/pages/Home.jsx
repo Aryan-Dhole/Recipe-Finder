@@ -14,9 +14,12 @@ function Home() {
     }
 
     useEffect(() => {
-        searchRecipes("paneer");
+        searchRecipes("pizza");
     }, []);
 
+    if (recipes.length === 0) {
+        return <div className="p-6 text-gray-500 animate-pulse text-center">Loading recipes...</div>
+    }
 
     return (
         <div className="p-6">
@@ -36,8 +39,9 @@ function Home() {
 
             <div className="grid grid-cols-2 gap-6 p-12 ">
                 {recipes.map((recipe) => (
-                    <Link to={`/recipe/${recipe.id}`}>
-                        <div key={recipe.id} className="p-4 shadow-lg rounded-xl hover:scale-103 transition">
+                    <Link to={`/recipe/${recipe.id}`}
+                        key={recipe.id}>
+                        <div className="p-4 shadow-lg rounded-xl hover:scale-103 transition">
                             <img src={recipe.image} alt={recipe.title} className="rounded-md" />
                             <h2 className="font-semibold mt-2 text-center">{recipe.title}</h2>
                         </div>
